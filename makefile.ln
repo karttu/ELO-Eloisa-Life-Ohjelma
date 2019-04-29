@@ -1,0 +1,19 @@
+MODEL = s
+CC = tcc
+ASM = tasm
+LINK = tlink
+LDFLAGS = -v -M -m$(MODEL)
+CFLAGS =  -DMSDOS -DCOMPILE_IN_PC98 -m$(MODEL) -O2 -w-
+ASMFLAGS = /ml
+
+.c.obj:
+  $(CC) -c $(CFLAGS)  $<
+
+.asm.obj:
+  $(ASM) $(ASMFLAGS) $<
+
+EXE_dependencies = elo.obj pupdate.obj puprest.obj supdate.obj \
+loadfile.obj bittable.obj getcpu.obj
+
+b:elo.exe : $(EXE_dependencies)
+  $(CC) -e$< $(LDFLAGS) $(EXE_dependencies) a:graphics.lib

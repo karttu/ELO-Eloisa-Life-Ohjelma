@@ -1,0 +1,53 @@
+scan b: > scan.elo
+SCAN 9.21 V111 Copyright 1989-94 by McAfee Associates. (408) 988-3832 
+Scanning memory for critical viruses.
+Scanning 64K RAM
+Scanning 128K RAM
+Scanning 192K RAM
+Scanning 256K RAM
+Scanning 320K RAM
+Scanning 384K RAM
+Scanning 448K RAM
+Scanning 512K RAM
+Scanning 576K RAM
+Scanning 640K RAM
+Scanning for known viruses.
+
+Scanning Volume: TRANSU
+Scanning boot sector of disk B:
+Scanning B:\ELO.EXE
+
+Disk B: contains 1 directories and 10 files.
+                          
+ No viruses found.
+     This McAFEE(TM) software  may  not be used by a business, government
+     agency or institution without  payment of  a negotiated license fee.
+     To negotiate a license fee contact McAfee Associates (408) 988-3832.
+     All use of  this software  is  conditioned upon  compliance with the
+     license terms set forth in the LICENSE.DOC file.
+
+
+      Copyright (c) McAfee Associates 1989-1994. All Rights Reserved.
+
+scan/nomem/a cga.bgi
+
+Scanning B:CGA.BGI                         
+ No viruses found.
+
+
+validate elo.exe
+          File Name:  elo.exe
+               Size:  98,938
+               Date:  8-4-1993
+File Authentication:
+     Check Method 1 - C543
+     Check Method 2 - 1681
+
+validate cga.bgi
+          File Name:  cga.bgi
+               Size:  6,332
+               Date:  11-11-1991
+File Authentication:
+     Check Method 1 - B62C
+     Check Method 2 - 09E7
+VALIDATE 0.4 Copyright 1988-92 by McAfee Associates.  (408) 988-3832

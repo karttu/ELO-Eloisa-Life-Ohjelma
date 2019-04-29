@@ -1,0 +1,174 @@
+
+  ELO   -   Electronic Life Orchestra, Eloisa Life-Ohjelma, Version 3.0
+  Copyright (C) 1992-1994 by Antti Karttunen (karttu@mits.mdata.fi)
+  (except module loadfile.c which is from XLife, Copyright 1989 Jon Bennett,
+  and getcpu.asm which is probably in Public Domain).
+
+  Requirements: either "western" IBM PC clone, with some CGA-compatible
+  screen (CGA, EGA, VGA,...., With Hercules use emulation software like SIMCGA)
+  or japanese NEC PC98 or clone.
+
+  Files:
+
+  ELO.EXE         The executable. Just enter ELO without any arguments
+                  to get some rudimentary help. Note: with NEC PC98
+                  and clones you should always say SET PC98=YES before
+                  you start actually running some pattern, so that
+                  ELO uses the proper video memory areas. Otherwise
+                  the program will crash. (I still don't know how to
+                  automagically detect whether the program is running
+                  in NEC PC98 or in some "western" (IBM) PC clone...)
+                  Say ELO -t0 -Xx rpentomi.lif  to see how fast it goes.
+
+  CGA.BGI         Borland C's overlay for CGA graphics functions. Must
+                  be included...
+
+  LIFEDEMO.BAT    Demo showing some life patterns.
+
+  FREDDEMO.BAT    Demo showing some images running in Fredkin's automata.
+                  (For more information about Fredkin's automata, see
+                  LIFE.DOC)
+
+  BREEDER.BAT or
+  BREEDER2.BAT    Run the infamous "breeder" with the rules of Life.
+                  Note that if you use IBM-PC clone (NOT PC98), you
+                  see only the upper half of breeder, because there
+                  are only 200 rows in CGA hires mode. However, the
+                  lower half is almost symmetrical to upper half
+                  (reflected around X-axis). It takes about 1500
+                  generations before the breeder starts actually
+                  producing the glider guns, so be patient with
+                  slower machines! (The loading of the BREEDER.LIF
+                  itself takes 964 generations.)
+
+  And many other *.BAT files, test them!
+
+  *.LIF and *.FRE These are the pattern files for Life and Fredkin'c CA
+                  The format is about the same as what Xlife uses, except
+                  that ELO doesn't support #A (absolute) format.
+                  Actually there's no difference between formats of
+                  *.LIF and *.FRE, except that the former files contain
+                  traditional LIFE-patterns, and the latter ones contain
+                  bitmap images which look (maybe) better when run with
+                  Fredkin's rules. But of course, nothing prevents you
+                  from the running life with *.FRE files, or vice versa.
+                  Most of *.LIF patterns are from Xlife (Life for Xwindows)
+                  which can be found from the ftp-site export.lcs.mit.edu
+                  (path: /contrib/xlife.tar.Z). Not all *.LIF patterns
+                  of that packet is included here, so you can download
+                  them by yourself. Some of them require little editing
+                  so that they fit into ELO's world. I think that in most
+                  cases it's enough to change the X- and Y-offsets given
+                  in the beginning of file. (The formats of pattern files
+                  are explained in the file xlife.man of the Xlife packet.)
+
+
+  Source files:
+
+  elo.c        -  The main source which contains all the toplevel C procedures.
+  elo.h        -  Some definitions for above one.
+  bittable.c   -  Contains a table for reversing the bits of byte.
+  loadfile.c   -  Procedures for loading in the pattern files (*.LIF & *.FRE)
+                  I took this from the Xlife package, and modified it a little.
+
+  supdate.asm  - Assembly code to compute the Life or Fredkin CA
+                 when one character per cell output mode is used (e.g.
+                 when ELO is started without -X option.) Contains also
+                 related screen handling and world wrapping procedures.
+
+  pupdate.h    - Assembly code to compute Life or Fredkin CA when
+                 one pixel per cell output mode is used (e.g. when
+                 ELO is strted with -X option). The code is contained
+                 in the macro GEN_PUPDATE, which is "called" 16 times from
+                 pupdate.asm with differing parameters, so that 16
+                 different versions of it are generated (8 to compute
+                 Life and 8 to compute Fredkin's CA). Some of them
+                 work only with 80386 (or higher), some of them keep
+                 the count of population, some of them don't, etc.
+                 Which version is actually used depends from the CPU
+                 detected with getcpu() function and from the options
+                 the user gives at starting time.
+                 The "hardest" code is in this module, and it does the
+                 hardest work in the whole program. The algorithm used
+                 to compute the Life in the pixel mode was modified
+                 from the PDP-11 life routine given in Mark D. Niemiec's
+                 article "Life Algorithms" at page 94 of BYTE, January 1979.
+                 It computes 16 or 32 cells at same time, depending from
+                 the CPU of the running machine.
+
+  pupdate.asm  - This contains code to "import" and "export" variables
+                 between data and code segments (i.e. between assembly
+                 code in pupdate.h and C code in elo.c). (There are not
+                 enough segment registers in the basic 8086...)
+                 This module contains also byte table for counting the
+                 number of 1-bits in byte. Otherwise this just "calls"
+                 GEN_PUPDATE macro included from the file pupdate.h
+
+  pupmacro.h   - Some assembly macros for the generic pseudo-instructions
+                 used in puprest.h
+
+  puprest.asm  - Miscellaneous routines for wrapping the world (in
+                 pixel mode) and handling the screen in CGA's hires
+                 mode.
+
+  getcpu.asm   - Function whih returns the CPU type as its result.
+                 I have modified this a little from the piece of code
+                 which was floating in the Usenet.
+
+
+  All the modules mentioned above were written by me (Antti Karttunen),
+  except loadfile.c and getcpu.asm.
+
+  Environment variables:
+
+  PC98         - This should be ALWAYS defined (e.g. by saying SET PC98=HAI
+                 in MS-DOS) with NEC PC98 and clones, when you use ELO,
+                 otherwise it will crash! And with "western" IBM PC-clones
+                 it naturally SHOULDN'T be defined.
+
+  VIDSEG       - The segment where ELO will throw its output. By default
+                 the value B800 is used (except A000 in one char/cell
+                 mode with PC98's). With PC98 you can define the color
+                 of cells with this variable together with BCOLOR, e.g.
+                 A800 = blue, B000 = red, B800 = green (when BCOLOR is
+                 undefined, i.e. zero). With some "western" PC's with
+                 some dubious displays the value should be probably
+                 B000 instead of B800 (try it if you don't get anything
+                 to screen...)
+
+  BCOLOR       - (Background color, works only with PC98's) If this is
+                 defined, then above mentioned three colour segments are
+                 initialized to some values, instead of the default zero.
+                 The value of this should be bit-mask between 0 and 6.
+
+  Note, I have only run ELO with western PC's and EPSON PC286LE
+  (NEC PC98 clone with LCD display), so I don't really know how
+  ELO actually looks like in real NEC PC98 with a color monitor.
+
+  Note: with PC98's the image will be left on the screen (as background)
+  if you exit from ELO with x instead of q.
+
+  Misfeatures and future suggestions:
+
+  Many options (like some of the -t options) are currently implemented
+  only with -X option (one pixel/cell output mode). With one char/cell
+  mode they don't have any effect, or produce incorrect results.
+
+  -X (one pixel per cell output mode) and -x (use extent checking to
+  optimize the generation of world, i.e. compute only the area of world
+  which is currently undergoing changes) options should be probably
+  default.
+
+  -Z option sleeps less than second in NEC PC98's, so use more of them,
+  e.g. -ZZZZ
+
+  I should add to GEN_PUPDATE (in pupdate.h) code which uses the VGA's 640x480
+  hires mode (or at least some EGA's mode). Using the CGA's 640x200
+  mode with Super VGA looks little bit lousy...
+
+  Fredkin's automaton would probably look nice with colours. (I.e.
+  we would use, let's say 16 differect colours for one cell, but
+  the algorithm would be still the same XOR-the-four-neighbouring-cells-
+  together).
+
+  This document file is lousy, and I have no time to edit this...

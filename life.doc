@@ -1,0 +1,1369 @@
+<1/27> 
+    <Notes:
+            Reproduced without permission. My apologies to
+            Martin Gardner and anybody else who feels
+            offended by this.
+            Comments inside the angle brackets <> are by me.
+            The corrections given in December 1970 and February
+            1971 are applied, and have not been included here.
+            Enjoy!>
+ 
+                   Scientific American, October 1970
+ 
+                          MATHEMATICAL GAMES
+ 
+                   The fantastic combinations of John
+                   Conway's new solitaire game "life"
+ 
+                          by Martin Gardner
+ 
+    Most of the work of John Horton Conway, a mathematician at
+    Gonville and Caius College of the University of Cambridge,
+    has been in pure mathematics. For instance, in 1967 he discovered
+    a new group - some call it "Conway's constellation" - that
+    includes all but two of the then known sporadic groups.
+    (They are called "sporadic" because they fail to fit any
+    classification scheme.) It is a breakthrough that has had
+    exciting repercussions in both group theory and number theory.
+    It ties in closely with an earlier discovery by John Leech of an
+    extremely dense packing of unit spheres in a space of 24
+    dimensions where each sphere touches 196,560 others. As Conway
+    has remarked, "There is a lot of room up there."
+      In addition to such serious work Conway also enjoys recreational
+    mathematics. Although he is highly productive in this field, he
+    seldom publishes his discoveries. One exception was his paper on
+    "Mrs. Perkins' Quilt," a dissection problem discussed in
+    "Mathematical Games" for September, 1966. My topic for July, 1967,
+    was sprouts, a topological pencil-and-paper game invented by
+    Conway and M. S. Paterson. Conway has been mentioned here several
+    other times.
+      This month we consider Conway's latest brainchild, a fantastic
+    solitaire pastime he calls "life." Because of its analogies with
+    the rise, fall and alterations of a society of living organisms,
+    it belongs to a growing class of what are called "simulation games"
+    - games that resemble real-life processes. To play life you must
+    have a fairly large checkerboard and a plentiful supply of flat
+    counters of two colors. (Small checkers or poker chips do nicely.)
+    An Oriental "go" board can be used if you can find flat counters
+    that are small enough to fit within its cells. (Go stones are
+    unusable because they are not flat.) It is possible to work with
+    pencil and graph paper but it is much easier, particularly for
+    beginners, to use counters and a board.<2/27>
+      The basic idea is to start with a simple configuration of
+    counters (organisms), one to a cell, then observe how it changes
+    as you apply Conway's "genetic laws" for births, deaths and
+    survivals. Conway chose his rules carefully, after a long period
+    of experimentation, to meet three desiredata:
+      1. There should be no initial pattern for which there is a
+    simple proof that the population can grow without limit.
+      2. There should be initial patterns that *apparently* do grow
+    without limit.
+      3. There should be simple initial patterns that grow and change
+    for a considerable period of time before coming to an end in three
+    possible ways: fading away completely (from overcrowding or from
+    becoming too sparse), settling into a stable configuration that
+    remains unchanged thereafter, or entering an oscillating phase in
+    which they repeat an endless cycle of two or more periods.
+      In brief, the rules should be such as to make the behavior of
+    the population unpredictable.
+      Conway's genetic laws are delightfully simple. First note that
+    each cell of the checkerboard (assumed to be an infinite plane)
+    has eight neighboring cells, four adjacent orthogonally, four
+    adjacent diagonally. The rules are:
+      1. Survivals. Every counter with two or three neighboring
+    counters survives for the next generation.
+      2. Deaths. Each counter with four or more neighbors dies
+    (is removed) from overpopulation. Every counter with one neighbor
+    or none dies from isolation.
+      3. Births. Each empty cell adjacent to exactly three neighbors
+    - no more, no fewer - is a birth cell. A counter is placed on it
+    at the next move.
+      It is important to understand that all births and deaths occur
+    *simultaneously*. Together they constitute a single generation or,
+    as we shall call it, a "move" in the complete "life history" of
+    the initial configuration. Conway recommends the following
+    procedure for making the moves:
+      1. Start with a pattern consisting of black counters.
+      2. Locate all counters that will die. Identify them by putting
+    a black counter on top of each.
+      3. Locate all vacant cells where births will occur. Put a white
+    counter on each birth cell.
+      4. After the pattern has been checked and double-checked to make
+    sure no mistakes have been made, remove all the dead counters
+    (piles of two) and replace all newborn white organisms with black
+    counters.
+      You will now have the first generation in the life history of
+    your initial pattern. The same procedure is repeated to produce
+    subsequent generations. It should be clear why counters of two
+    colors are needed. Because births and deaths occur simultaneously,
+    newborn counters play no role in causing other deaths or births.
+    It is essential, therefore, to be able to distinguish them from
+    live counters of the previous generation while you check the
+    pattern to be sure no errors have been made. Mistakes are very
+    easy to make, particularly when first playing the game. After
+    playing it for a while you will gradually make fewer mistakes,
+    but even experienced players must exercise great care in checking
+    every new generation before removing the dead counters and
+    replacing newborn white counters with black.<3/27>
+      You will find the population constantly undergoing unusual,
+    sometimes beautiful and alway unexpected change. In a few cases
+    the society eventually dies out (all counters vanishing), although
+    this may not happen until after a great many generations. Most
+    starting patterns either reach stable figures - Conway calls them
+    "still lifes" - that cannot change or patterns that oscillate
+    forever. Patterns with no initial symmetry tend to become
+    symmetrical. Once this happens the symmetry cannot be lost,
+    although it may increase in richness.
+      Conway conjectures that no pattern can grow without limit.
+    Put another way, any configuration with a finite number of
+    counters cannot grow beyond a finite upper limit to the number
+    of counters on the field. This is probably the deepest and most
+    difficult question posed by the game. Conway has offered a prize
+    of $50 to the first person who can prove or disprove the conjecture
+    before the end of the year. One way to disprove it would be to
+    discover patterns that keep adding counters to the field: a "gun"
+    (a configuration that repeatedly shoots out moving objects such
+    as the "glider," to be explained below) or a "puffer train"
+    (a configuration that moves but leaves behind a trail of "smoke").
+    I shall forward all proofs to Conway, who will act as the final
+    arbiter of the contest.
+      Let us see what happens to a variety of simple patterns.
+      A single organism or any pair of counters, wherever placed,
+    will obviously vanish on the first move.
+      A beginning pattern of three counters also dies immediately
+    unless at least one counter has two neighbors. The illustration
+    below shows the five triplets that do not fade on the first move.
+    (Their orientation is of course irrelevant.)
+ 
+    The fate of five triplets in "life"
+                 MOVES
+	 0         1         2
+    :::::::::::::::::::::::::::::::
+    :<a>......:.........:.........:
+    :.........:.........:.........:
+    :....*....:.........:.........:
+    :....*....:...**....:.(DIES)..:
+    :.....*...:.........:.........:
+    :.........:.........:.........:
+    :.........:.........:.........:
+    :.........:.........:.........:
+    :::::::::::::::::::::::::::::::
+ 
+    :::::::::::::::::::::::::::::::
+    :<b>......:.........:.........:
+    :.........:.........:.........:
+    :....*....:....*....:.........:
+    :...*.*...:....*....:.(DIES)..:
+    :.........:.........:.........:
+    :.........:.........:.........:
+    :.........:.........:.........:
+    :.........:.........:.........:
+    :::::::::::::::::::::::::::::::
+<4/27> 
+    :::::::::::::::::::::::::::::::
+    :<c>......:.........:.........:
+    :.........:.........:.........:
+    :.....*...:.........:.........:
+    :....*....:....*....:.(DIES)..:
+    :...*.....:.........:.........:
+    :.........:.........:.........:
+    :.........:.........:.........:
+    :.........:.........:.........:
+    :::::::::::::::::::::::::::::::
+ 
+    :::::::::::::::::::::::::::::::
+    :<d>......:.........:.........:
+    :.........:.........:.........:
+    :...**....:...**....:.........:
+    :...*.....:...**....:.........:
+    :.........:.........:.........:
+    :.........:..BLOCK..:.........:
+    :.........:.(STABLE):.........:
+    :.........:.........:.........:
+    :::::::::::::::::::::::::::::::
+ 
+    :::::::::::::::::::::::::::::::
+    :<e>......:.........:.........:
+    :.........:.........:.........:
+    :.........:....*....:.........:
+    :...***...:....*....:...***...:
+    :.........:....*....:.........:
+    :.........:.........:(PERIOD).:
+    :.........:.BLINKER.:.(TWO)...:
+    :.........:.........:.........:
+    :::::::::::::::::::::::::::::::
+ 
+      The first three [a, b, c] vanish on the second move. In
+    connection with c it is worth noting that a single diagonal chain
+    of counters, howewer long, loses its end counters on each move
+    until the chain finally disappears. The speed a chess king moves in
+    any direction is called by Conway (for reasons to be made clear
+    later) the "speed of light." We say, therefore, that a diagonal
+    chain decays at each end with the speed of light.
+      Pattern d becomes a stable "block" (two-by-two square) on the
+    second move. Pattern e is the simplest of what are called
+    "flip-flops" (oscillating figures of period 2). It alternates
+    between horizontal and vertical rows of three. Conway callls it
+    a "blinker."
+<5/27>
+           The life histories of the five tetrominoes
+			     MOVES
+	 0          1          2          3          4
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :<a>.......:..........:..........:..........:..........:
+    :..........:..........:..........:..........:..........:
+    :..........:..........:..........:..........:..........:
+    :....**....:..........:..........:..........:..........:
+    :....**....:..........:..........:..........:..........:
+    :..........:..........:..........:..........:..........:
+    :...BLOCK..:..........:..........:..........:..........:
+    :..........:..........:..........:..........:..........:
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :<b>.......:..........:..........:..........:..........:
+    :..........:..........:..........:..........:..........:
+    :..........:....**....:....**....:..........:..........:
+    :...****...:....**....:...*..*...:..........:..........:
+    :..........:....**....:....**....:..........:..........:
+    :..........:..........:..........:..........:..........:
+    :..........:..........:..BEEHIVE.:..........:..........:
+    :..........:..........:..........:..........:..........:
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :<c>.......:..........:..........:..........:..........:
+    :..........:..........:..........:..........:..........:
+    :....*.....:....**....:....**....:..........:..........:
+    :....**....:....**....:...*..*...:..........:..........:
+    :.....*....:....**....:....**....:..........:..........:
+    :..........:..........:..........:..........:..........:
+    :..........:..........:..BEEHIVE.:..........:..........:
+    :..........:..........:..........:..........:..........:
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :<d>.......:..........:..........:..........:..........:
+    :..........:..........:..........:..........:..........:
+    :....*.....:....*.....:....**....:....**....:..........:
+    :....****..:....**....:....**....:...*..*...:..........:
+    :..........:.....*....:....**....:....**....:..........:
+    :..........:..........:..........:..........:..........:
+    :..........:..........:..........:..BEEHIVE.:..........:
+    :..........:..........:..........:..........:..........:
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :<e>.......:..........:..........:..........:..........:
+    :..........:..........:....*.....:....*.....:..........:
+    :....*.....:...***....:...*.*....:....*.....:...***....:
+    :...***....:...***....:..........:...*.*....:...*.*....:
+    :..........:....*.....:...***....:....*.....:...***....:
+    :..........:..........:..........:....*.....:..........:
+    :..........:..........:..........:..........:..........:
+    :..........:..........:..........:..........:..........:
+<6/27>
+			     MOVES
+	 5          6          7          8          9
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :<e continues>........:..........:..........:..........:
+    :..........:..........:..........:....*.....:...***....:
+    :....*.....:....*.....:...***....:...***....:..........:
+    :...*.*....:...***....:..*...*...:..*.*.*...:.*.....*..:
+    :..*...*...:..**.**...:..*...*...:.***.***..:.*.....*..:
+    :...*.*....:...***....:..*...*...:..*.*.*...:.*.....*..:
+    :....*.....:....*.....:...***....:...***....:..........:
+    :..........:..........:..........:....*.....:...***....:
+    :..........:..........:..........:..........:..........:
+    :..........:..........:..........:..........:.TRAFFIC..:
+    :..........:..........:..........:..........:.LIGHTS...:
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ 
+      The illustration above shows the life histories of the five
+    tetrominoes (four rookwise-connected counters). The square <a> is,
+    as we have seen, a still-life figure. Tetrominoes b and c reach a
+    stable figure, called a "beehive," on the second move. Beehives
+    are frequently produced patterns. Tetromino d becomes a beehive
+    on the third move. Tetromino e is the most interesting of the lot.
+    After nine moves it becomes four isolated blinkers, a flip-flop
+    called "traffic lights." It too is a common configuration. The
+    illustration below shows the 12 commonest forms of still life.
+ 
+	The commonest stable forms
+    ::::::::::::::::::::::::::::::::::
+    :..........:..........:..........:
+    :....*.....:....**....:....**....:
+    :...*.*....:...*..*...:...*..*...:
+    :...*.*....:....*.*...:...*..*...:
+    :....*.....:.....*....:....**....:
+    :..........:..........:..........:
+    :.BEEHIVE..:...LOAF...:...POND...:
+    ::::::::::::::::::::::::::::::::::
+    :..........:..........:..........:
+    :..........:..........:..........:
+    :....*.....:....**....:...*.**...:
+    :...*.*....:....**....:...**.*...:
+    :....*.....:..........:..........:
+    :..........:..........:..........:
+    :...TUB....:..BLOCK...:..SNAKE...:
+    ::::::::::::::::::::::::::::::::::
+    :..........:..........:..........:
+    :....*.....:....*.....:...**.....:
+    :...*.*....:...*.*....:...*.*....:
+    :....*.*...:....**....:....**....:
+    :.....*....:..........:..........:
+    :..........:..........:..........:
+    :..BARGE...:...BOAT...:...SHIP...:
+    ::::::::::::::::::::::::::::::::::
+    :....*.....:....*.....:...**.....:
+    :...*.*....:...*.*....:...*.*....:
+    :....*.*...:....*.*...:....*.*...:
+    :.....*.*..:.....**...:.....**...:
+    :......*...:..........:..........:
+    :..........:..........:..........:
+    :LONG.BARGE:.LONG.BOAT:.LONG.SHIP:
+    ::::::::::::::::::::::::::::::::::
+<7/27> 
+      The reader may enjoy experimenting with the 12 pentominoes
+    (all patterns of five rookwise-connected counters) to see what
+    happens to each. He will find that five vanish before the fifth
+    move, two quickly reach a stable pattern of seven counters and
+    four in a short times become traffic lights. The only pentomino
+    that does not end quickly (by vanishing, becoming stable or
+    oscillating) is the R pentomino ("a" in the illustration at the
+    bottom of this page). Its fate is not yet known. Conway has
+    tracked it for 460 moves. By then it has thrown off a number
+    of gliders. Conway remarks: "It has left a lot of miscellaneous
+    junk stagnating around, and has only a few small active regions,
+    so it is not at all obvious that it will continue indefinitely.
+    After 48 moves it has become a figure of seven counters on the
+    left and two symmetric regions on the right which, if undisturbed,
+    would grow into a honey farm (four beehives) and traffic lights.
+    However, the honey farm gets eaten into pretty quickly and the
+    four blinkers forming the traffic lights disappear one by one
+    into the rest of a rather blotchy population."
+      For long-lived populations such as this one Conway sometimes
+    uses a PDP 7 computer with a screen on which he can observe the
+    changes. The program was written by M. J. T. Guy and S. R. Bourne.
+    Without its help some discoveries about the game would have been
+    difficult to make.
+      As easy exercises to be answered next month the reader is
+    invited to discover the fate of the Latin cross ("b" in the
+    illustration at the bottom of this page), the swastika (c),
+    the letter H (d), the beacon (c), the clock (f), the toad (g)
+    and the pinwheel (h). The last three figures were discovered
+    by Simon Norton. If the center counter of the H is moved up one
+    cell to make an arch (Conway calls it "pi"), the change is
+    unexpectedly drastic. The H quickly ends but pi has a long
+    history. Not until after 173 moves has it settled down to five
+    blinkers, six blocks and two ponds. Conway also has tracked the
+    life histories of all the hexominoes, and all but seven of the
+    heptominoes.
+ 
+          The R pentomino (a) and excercises for the reader
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :<a>........:<b>........:<c>........:<d>........:...........:
+    :...........:.....*.....:...*.***...:...........:...........:
+    :....**.....:....***....:...*.*.....:....*.*....:...........:
+    :...**......:.....*.....:...*****...:....***....:...........:
+    :....*......:.....*.....:.....*.*...:....*.*....:...........:
+    :...........:...........:...***.*...:...........:...........:
+    :...........:...........:...........:...........:...........:
+    :R-PENTOMINO:LATIN.CROSS:.SWASTIKA..:.LETTER.H..:...........:
+    ::::::::::::::::::::::::::::::::::::::::::::**:::::::::::::::
+    :<e>........:<f>........:<g>........:<h>....**..:...........:
+    :...........:...........:...........:...........:...........:
+    :.....**....:....*......:...........:.....****..:...........:
+    :.....**....:.....**....:....***....:.**.*....*.:...........:
+    :...**......:...**......:...***.....:.**.**...*.:...........:
+    :...**......:.....*.....:...........:....*..*.*.**..........:
+    :...........:...........:...........:....*.*..*.**..........:
+    :..BEACON...:...CLOCK...:...TOAD....:.....****..:...........:
+    :...........:...........:...........:...........:...........:
+    :...........:...........:...........:.....**....:...........:
+    :...........:...........:...........:.....**....:...........:
+    :...........:...........:...........:..PINWHEEL.:...........:
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+<8/27> 
+                          The "glider"
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :..........:..........:..........:..........:..........:
+    :..........:..........:..........:..........:..........:
+    :..........:..........:..........:..........:..........:
+    :...*......:..........:..........:..........:..........:
+    :....*..--\:...*.*....:.....*....:...*......:....*.....:
+    :..***.....-->..**..---->.*.*..---->..**..---->...*....:
+    :..........:....*.....:....**....:...**.....:...***....:
+    :..........:..........:..........:..........:..........:
+    :..........:..........:..........:..........:..........:
+    :..........:..........:..........:..........:..........:
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ 
+      One of the most remarkable of Conway's discoveries is the
+    five-counter glider shown in the illustration above. After
+    two moves it has shifted slightly and been reflected in
+    a diagonal line. Geometers call this a "glide reflection";
+    hence the figure's name. After two more moves the glider has
+    righted itself and moved one cell diagonally down and to the
+    right from its initial position. We mentioned above that the
+    speed of a chess king is called the speed of light. Conway chose
+    the phrase because it is the highest speed at which any kind
+    of movement can occur on the board. No pattern can replicate
+    itself rapidly enough to move at such speed. Conway has proved
+    that maximum speed diagonally is a fourth the speed of light.
+    Since the glider replicates itself in the same orientation after
+    four moves, and has traveled one cell diagonally, one says that
+    it glides across the field at a fourth the speed of light.
+      Movement of a finite figure horizontally or vertically into
+    empty space, Conway has also shown, cannot exceed half the speed
+    of light. Can any reader find a relatively simple figure that
+    travels at such a speed? Remember, the speed is obtained by
+    dividing the number of moves required to replicate a figure by
+    the number of cells it has shifted. If a figure replicates in
+    four moves in the same orientation after traveling two unit
+    squares horizontally or vertically, its speed will be half that
+    of light. I shall report later on any discoveries by readers of
+    any figures that crawl across the board in any direction at any
+    speed, however low. Figures that move in this way are extremely
+    hard to find. Conway knows of only four, including the glider,
+    which he calls "spaceships" (the glider is a "featherweight
+    spaceship"; the others have more counters). He has asked me to
+    keep three heavier spaceships secret as a challenge to readers.
+    Readers are also urged to search for periodic figures other than
+    the ones given here.
+      The bottom illustration on this page depicts three beautiful
+    discoveries by Conway and his collaborators. the stable honey
+    farm ("a" in the illustration) results after 14 moves from a
+    horizontal row of seven counters. Since a five-by-five block
+    in one move produces the fourth generation of this life history,
+    it becomes a honey farm after 11 moves. The "figure 8" (b), an
+    oscillator found by Norton, both resembles an 8 and has a period
+    of 8. The form c, called "pulsar CP 48-56-72," is an oscillator
+    with a life cycle of period 3. The state shown here has 48
+    counters, state two has 56 and state three has 72, after which
+    the pulsar returns to 48 again. It is generated in 32 moves by
+    a heptomino consisting of a horizontal row of five counters with
+    one counter directly below each end counter of the row.
+<9/27> 
+    Three remarkable patterns, one stable and two oscillating
+    ::::::::::::::::::::::::::::::::::::::::::::::::::
+    ....<a>...........<b>...........<c>...............
+    ..................................................
+    .........*............***...........***...***.....
+    ........*.*...........***.........................
+    ........*.*...........***.........*....*.*....*...
+    .........*...............***......*....*.*....*...
+    .........................***......*....*.*....*...
+    ....**.......**..........***........***...***.....
+    ...*..*.....*..*..................................
+    ....**.......**......FIGURE.8.......***...***.....
+    ..................................*....*.*....*...
+    .........*........................*....*.*....*...
+    ........*.*.......................*....*.*....*...
+    ........*.*.......................................
+    .........*..........................***...***.....
+    ..................................................
+    ....HONEY.FARM..................PULSAR.CP.48-56-72
+    ::::::::::::::::::::::::::::::::::::::::::::::::::
+ 
+      Conway has tracked the life histories of a row of n counters
+    through n = 20. We have already disclosed what happens through
+    n = 4. Five counters result in traffic lights, six fade away,
+    seven produce the honey farm, eight end with four blocks and
+    four beehives, nine produce two sets of traffic lights, and 10
+    lead to the "pentadecathlon," with a life cycle of period 15.
+    Eleven counters produce two blinkers, 12 end with two beehives,
+    13 with two blinkers, 14 and 15 vanish, 16 give "big traffic
+    lights" (eight blinkers), 17 end with four blocks, 18 and 19
+    fade away and 20 generate two blocks.
+      Rows consisting of sets of five counters, an empty cell
+    separating adjacent sets, have also been tracked by Conway.
+    The 5-5 row generates the pulsar CP 48-56-72 in 21 moves, 5-5-5
+    ends as four blocks and two blinkers, 5-5-5-5 ends with four
+    honey farms and four blinkers, 5-5-5-5-5 terminates with a
+    "spectacular display of eight gliders and eight blinkers.
+    Then the gliders crash in pairs to become eight blocks."
+    The form 5-5-5-5-5-5 ends with four blinkers, and 5-5-5-5-5-5-5,
+    Conway remarks, "is marvelous to sit watching on the computer
+    screen." He has yet to track it to its ultimate destiny, however.
+<10/27> 
+                   Scientific American, November 1970
+                      Mathematical games, page 118
+ 
+    Last month's exercises, involving John Horton Conway's game
+    "life," are answered as follows:
+      The Latin cross dies on the fifth move. The swastika vanishes
+    on the sixth move. The letter H dies on the sixth move. The next
+    three figures are flip-flops: as Conway writes, "The toad pants,
+    the clock ticks and the beacon flashes, with period 2 in every
+    case." The pinwheel's interior rotates 90 degrees clockwise on
+    each move, the rest of the pattern remaining stable. Periodic
+    figures of this kind, in which a fixed outer border is required
+    to move the interior, Conway calls "billiard-table configurations"
+    to distinguish them from "naturally periodic" figures such as the
+    toad, clock and beacon.
+ 
+    .......   ........   .........
+    ....*..   .....*..   ......*..  Lightweight (left),
+    .....*.   ......*.   .......*.  middleweight (center) and
+    .*...*.   .*....*.   .*.....*.  heavyweight (right) spaceships
+    ..****.   ..*****.   ..******.
+    .......   ........   .........
+ 
+      The three known spaceships (in addition to the glider, or
+    "featherweight spaceship," given last month) are shown in the
+    illustration above. All three travel horizontally to the right
+    with half the speed of light. As they move they throw off sparks
+    that vanish immediately as the ships continue on their way.
+    Unescorted spaceships cannot have bodies longer than six counters
+    without giving birth to objects that later block their motion.
+    Conway has discovered, however, that longer spaceships, which he
+    calls "overweight" ones, can be escorted by two or more smaller
+    ships that prevent the formation of blocking counters. The
+    illustration below shows the longest spaceship that can be
+    escorted by as few as two smaller ships; still longer ships
+    require a flotilla of more than two companions. A spaceship
+    with a body of 100 counters, Conway finds, can be escorted
+    safely by a flotilla of 33 smaller ships.
+      I shall report later on any success readers have in finding
+    new spaceships or oscillators or in meeting Conway's challenge
+    to settle his conjecture about the game.
+ 
+    ...............
+    ..........*.... Overweight spaceship with two escorts.
+    ...........*...
+    .....*.....*...
+    ......******...
+    ...............
+    ...............
+    ...............
+    ..************.
+    .*...........*.
+    .............*.
+    ............*..
+    ...............
+    ..........*....
+    ...........*...
+    .....*.....*...
+    ......******...
+    ...............
+<11/27> 
+                   Scientific American, January 1971
+                      Mathematical games, page 108
+ 
+      Next month this department will be devoted to "cellular
+    automata theory," a new field that includes John Horton Conway's
+    game "life," the topic for last October. I shall report then on
+    what readers have discovered about Conway's game and sketch the
+    historical background for games of this type. Meanwhile I am
+    pleased to report that two unresolved questions in October's
+    column have been settled: the final destinies of the R pentomino
+    and the 5-5-5-5-5-5-5 row (seven sets of five counters on the
+    same orthogonal row, with single vacant cells separating the
+    sets).
+      The R pentomino reaches a "steady state" after move 1103. Six
+    gliders have been produced and are traveling outward. The debris
+    left at the center (see illustration on page 105 <sorry, not
+    reproduced here>) consists of four blinkers, one ship, one boat,
+    one loaf, four beehives and eight blocks. This was first
+    established at Case Western Reserve University with a computer
+    program written by Gary Filipski and Brad Morgan; the results
+    were sent to me by Ranan B. Banerji, professor of engineering.
+    At the time of writing later confirmations have been received
+    from Jonathan Kring, North Olmstead, Ohio; Robert Slaughter,
+    University on Nebraska Computing Center; D. M. Saul, University
+    of Illinois; George A Miller, Rockville, Md. (who supplied the
+    graph reproduced here), Robert Bison, IBM Corporation, Kingston,
+    N.Y.; Robert Maas, Mountain View, Calif.; Leonard A Adleman,
+    San Francisco; Eric Werne, Carnegie-Mellon University; Maynard C.
+    Cheney, University of Chigaco, and group at Honeywell's Computer
+    Control Division in Framingham, Mass., that includes Keith
+    McClelland, Tom Holmes, Mike Sporer, Bill Woods and Don Woods.
+      The fate of the 5-5-5-5-5-5-5 was independently found at about
+    the same time by the Honeywell group cited above, by D. M. Saul
+    and by Robert T. Wainwright, Yorktown Heights, N.Y. The pattern
+    stabilizes after move 323 with four traffic lights, eight
+    blinkers, eight loaves, eight beehives and four blocks - a total
+    of 192 bits. The printout of this spectacular end result (see
+    illustration on page 106 <not reproduced here either>) was
+    supplied by Wainwright. Because symmetry cannot be lost in the
+    life histories of any initial pattern, the vertical and
+    horizontal axes of symmetry of the original figure are preserved
+    in the final configuration. The maximum population (492 bits)
+    occurs in generation 283.
+      Although I did not say so before, it should be apparent that
+    rows of the n-n-n... type become interesting only when n is at
+    least 5, which allows the sets to interact. Rows of 1-1-1...
+    and 2-2-2... immediately vanish. The 3-3-3... row is simply a
+    row of blinkers and the 4-4-4... becomes a row of stable beehives
+    on the second move.
+<12/27>
+                   Scientific American, February 1971
+ 
+                          MATHEMATICAL GAMES
+ 
+                On cellular automata, self-reproduction,
+                 the Garden of Eden and the game "life"
+ 
+                          by Martin Gardner
+ 
+      John Horton Conway's game "life," last October's topic,
+    stirred such interest among computer scientists that this
+    month's department will again be devoted to the game. Before
+    reporting as many new discoveries as possible I should like
+    to discuss some highlights in the history of "cellular automata
+    theory," the field in which games similar to Conway's are being
+    investigated.
+      It all began about 1950, when John von Neumann set himself the
+    task of proving the possibility of self-duplicating automata.
+    Such a machine, given proper instructions, would build an exact
+    duplicate of itself. Each of the two machines would then build
+    another, the four would become eight, and so on. (This
+    proliferation of self-replicating automata is the basis of Lord
+    Dunsany's amusing 1951 novel The Last Revolution.) Von Neumann
+    first proved his case with "kinematic" models of a machine that
+    could roam through a warehouse of parts, select needed components
+    and put together a copy of itself. Later, adopting an inspired
+    suggestion by his friend Stanislaw M. Ulam, he showed the
+    possibility of such machines in a more elegant and abstract way.
+      Von Neumann's new proof used what is now called a "uniform
+    cellular space" equivalent to an infinite checkerboard. Each
+    cell can have any finite number of "states," including a
+    "quiescent" (or empty) state, and a finite set of "neighbor"
+    cells that can influence its state. The pattern of states
+    changes in discrete time steps according to a set of "transition
+    rules" that apply simultaneously to every cell. The cells
+    symbolize the basic parts of a finite-state automaton and a
+    configuration of live cells is an idealized model of such a
+    machine. Conway's game is based on just such a space. His
+    neighborhood consists of the eight cells surrounding a cell;
+    each cell has two states (empty or filled), and his transition
+    rules are the birth, death and survival rules I explained in
+    October. Von Neumann, applying transition rules to a space in
+    which each cell has 29 states and four orthogonally adjacent
+    neighbors, proved the existence of a configuration of about
+    200 000 cells that would self-reproduce.
+      The reason for such an enormous configuration is that, for
+    von Neumann's proof to apply to actual automata, it was necessary
+    that his cellular space be capable of simulating a Turing
+    machine: an idealized automaton, named for its inventor, the
+    British mathematician A. M. Turing, capable of performing any
+    desired calculation. By embedding this universal computer in
+    his configuration, von Neumann was able to produce a universal
+    constructor. Because it could in principle construct any desired
+    configuration by stretching "arms" into an empty region of the
+    cellular space, it would self-replicate when given a blueprint
+    of itself. Since von Neumann's death in 1957 his existence proof
+    (the actual configuration is too vast to construct and manipulate)
+    has been greatly simplified. The latest and best reduction, by
+    Edwin Roger Banks, a mechanical engineering graduate student at
+    the Massachusetts Institute of Technology, does the job with the
+    cells of only four states.<13/27>
+      Self-replication in a trivial sense - without using
+    configurations that contain Turing machines - is easy to achieve.
+    A delightfully simple example, discovered by Edward Fredkin of
+    M.I.T. about 10 years ago, uses two-state cells, the von Neumann
+    neighborhood of four orthogonally adjacent cells and the
+    following parity rule: Each cell with an even number of live
+    neighbors (0, 2, 4) at time t becomes or remains empty at time
+    t+1, and each cell with an odd number of neighbors (1, 3) at time
+    t becomes or remains live at time t+1. It is not hard to show
+    that after 2^n moves (n varying with different patterns) any
+    initial pattern of live cells will reproduce itself four times
+    - above, below, left and right of an empty space that it formerly
+    occupied. The four replicas will be displaced 2^n cells from
+    the vanished original. The new pattern will, of course, replicate
+    again after another 2^n steps, so that the duplicates keep
+    quadrupling in the endless series 1, 4, 16, 64, .... The
+    illustration below shows two quadruplings of a right tromino.
+    Terry Winograd, in a 1967 term paper written when he was an
+    M.I.T. student, generalized Fredkin's rule to other neighborhoods,
+    any number of dimensions and cells with any prime number of
+    states.
+ 
+                 The replication of a tromino
+    .......................................................
+    .......................................................
+    .......................................................
+    ..............................................**.......
+    ................................**............*........
+    ....................**.........*.**....................
+    ..........**........*.........*.*.**...................
+    ..**.....*.**.....**..**.....*.*.*.**.....**......**...
+    ..*......**.......*...*......**.*.*.......*.......*....
+    ..........*.........**........**.*.....................
+    ....................*..........**......................
+    ................................*.............**.......
+    ..............................................*........
+    .......................................................
+    .......................................................
+    .......................................................
+ 
+    (continues...)
+    ....................................
+    ..........................**........
+    .......**.................*.........
+    ......*.**..............**..**......
+    ......**................*...*.......
+    .......*..............**..**..**....
+    ...**......**.........*...*...*.....
+    ..*.**....*.**......**..**..**..**..
+    ..**......**........*...*...*...*...
+    ...*.......*..........**..**..**....
+    .......**.............*...*...*.....
+    ......*.**..............**..**......
+    ......**................*...*.......
+    .......*..................**........
+    ..........................*.........
+    ....................................
+<14/27> 
+      Ulam investigated a variety of cellular automata games,
+    experimenting with different neighborhoods, numbers of states
+    and transition rules. In a 1967 paper "On Recursively Defined
+    Geometrical Objects and Patterns of Growth," written with Robert
+    G. Schrandt, Ulam described a number of different games. The
+    upper illustration on this page (113) <sorry, not reproduced>
+    shows generation 45 of a history that began with one counter
+    on the central cell. As in Conway's game, the cells are
+    two-state, but the neighborhood is that of von Neumann
+    (four adjacent orthogonal cells). Births occur on cells
+    that have one and only one neighbor, and all live cells
+    of generation n vanish when generation n+2 is born. In other
+    words, only the last two generation survive at any step. In
+    the illustration the 444 new births are shown as black cells.
+    The 404 white cells of the preceding generation will all
+    disappear on the next move. Note the characteristic subpattern,
+    which Ulam calls a "dog bone." Ulam experimented with games in
+    which two configurations were allowed to grow until they
+    collided. In the ensuing "battle" one side would sometimes wipe
+    out the other; sometimes both armies would be annihilated. Ulam
+    also explored games on three-dimensional cubical tessellations.
+    His major papers on cellular automata are in Essays on Cellular
+    Automata (University of Illinois Press, 1970), edited by Arthur
+    W. Burks.
+      Similar games can be devised for triangular and hexagonal
+    tessellations but, although they *look* different, they are not
+    essentially so. All can be translated into equivalent games on
+    a square tessellation by a suitable definition of "neighborhood."
+    A neighborhood need not be made up of touching cells. In chess,
+    for instance, a knight's neighborhood consists of the squares to
+    which it can leap and squares on which there are pieces that can
+    attack it. As Burks has pointed out, games such as chess,
+    checkers and go can be regarded as cellular automata games in
+    which there are complicated neighborhoods and transition rules
+    and in which players choose among alternative next states in an
+    attempt to be first to reach a certain final state that wins.
+      Among the notable contributions of Edward F. Moore to cellular
+    automata theory the best-known is a technique for proving the
+    existence of what John W. Tukey named "Garden of Eden" patterns.
+    These are configurations that cannot arise in a game because no
+    preceding generation can form them. They appear only if given in
+    the initial (zero) generation. Because such a configuration has
+    no predecessor, it cannot be self-reproducing. I shall not
+    describe Moore's ingenious technique because he explained it
+    informally in an article in this magazine (see "Mathematics in
+    the Biological Sciences," by Edward F. Moore; September, 1964)
+    and more formally in a paper that is included in Burk's anthology.<15/27>
+      Alvy Ray Smith III, a cellular automata expert at New York
+    University's School of Engineering and Science, found a simple
+    application of Moore's technique to Conway's game. Consider two
+    five-by-five squares, one with all cells empty, the other with
+    one counter in the center. Because, in one move, the central
+    nine cells of both squares are certain to become identical
+    (in this case all cells empty) they are said to be "mutually
+    erasable." It follows from Moore's theorem that a Garden of Eden
+    configuration must exist in Conway's game. Unfortunately the
+    proof does not tell how to find such a pattern and so far none
+    is known. It may be simple or it may be enormously complex.
+    Using one of the Moore's formulas, Smith has been able to
+    calculate that such a pattern exists within a square of 10
+    billion cells on a side, which does not help much in finding one.
+      Smith has been working on cellular automata that simulate
+    pattern-recognition machines. Although this is now only of
+    theoretical interest, the time may come when robots will need
+    "retinas" for recognizing patterns. The speeds of scanning
+    devices are slow compared with the speeds obtainable by the
+    "parallel computation" of animal retinas, which simultaneously
+    transmit thousands of messages to the brain. Parallel computation
+    is the only way new computers can increase significantly in speed
+    because without it they are limited by the speed of light through
+    miniaturized circuitry (see "The Fastest Computer," by  D. L.
+    Slotnick, page 76). The cover of this issue of SCIENTIFIC AMERICAN
+    shows a simple procedure, devised by Smith, by which a finite
+    one-dimensional cellular space employs parallel computation for
+    recognizing palindromic symmetry. Each cell has many possible
+    states, the number depending on the number of different symbols
+    in the palindrome, and a cell's neighborhood is the two cells on
+    each side.
+ 
+    <Here is my ascii rendition of the Sci-Am February 1971 cover>
+ 
+    (#:#)(T:T)(O:O)(O:O)(H:H)(O:O)(T:T)(T:T)(O:O)(H:H)(O:O)(O:O)(T:T)(#:#)
+         (# O)(T:O)(O H)(O O)(H T)(O:T)(T O)(T H)(O O)(H:O)(O T)(O #)
+              (# H)(T O)(O T)(O T)(H:O)(O H)(T O)(T O)(O T)(H #)
+                   (# T)(T T)(O O)(O:H)(H O)(O O)(T T)(T #)
+                        (# O)(T H)(O:O)(O O)(H T)(O #)
+                             (# O)(T:O)(O T)(O #)
+                                  (#:T)(T #)
+                                       +---+
+                                       |   |
+                                       +---+---+
+                                           |   |
+                                           +---+---+
+                                               |   |
+                                               +---+---+
+                                                   |   |
+                                                   +---+---+
+                                                       |   |
+                                                       +---+---+
+                                                           |   |
+                                                           +---+---+
+                                                               |   |
+                                                               +---+
+ 
+<16/27> 
+      On the cover, which Smith designed, he symbolizes the palindrome
+    TOO HOT TO HOOT with four states of cells in the top row, T, O and
+    H are represented by blue, red and yellow respectively <but here
+    the corresponding letters are used instead>, and black <here the
+    character '#'> marks the palindrome's two ends. The white cells 
+    <blanks> in the other rows are in the quiescent state. The
+    horizontal rows below the top row are successive generations of
+    the top configuration when certain transition rules are followed
+    in discrete time steps. In other words, the picture is a
+    space-time diagram of a single row, each successive row
+    indicating the next generation.
+      In the first transition each color travels one cell to the left
+    and one cell to the right, except for the end colors, which are
+    blocked by black; black moves inward at each step. Each cell on
+    which two colors land acquires a new state, symbolized by a cell
+    divided into four triangles. The left triangle has the color that
+    was previously on the left, the right triangle has the color
+    previously on the right. The result of this first move is shown
+    in the second row. When an adjacent pair of cells forms a tilted
+    square in the center that is a solid color, it indicates a
+    "collision" of like colors and is symbolized by black dots in the
+    two white triangles of the left cell <here the colon ':' is used>.
+    Dots remain in that cell for all subsequent generations unless a
+    collission of unlike colors occurs to the immediate right of the
+    dotted cell, in which case the dots are erased. When collisions
+    of *unlike* colors occur, the left cell of the pair remains
+    undotted for all subsequent generations even though like colors
+    may later collide on its right. At each move the colors continue
+    to travel one cell left or right (the direction in which the
+    colored triangles point) and all rules apply. If the palindrome
+    has n letters, with n even as in this example (the scheme is
+    modified slightly if n is odd), it is easy to see that after n/2
+    moves only two adjacent nonquiescent cells remain. If the left
+    cell of this pair is dotted, the automaton has recognized the
+    initial row as being palindromic. Down the diagram's center you
+    see the colliding pairs of like colors in the same order as they
+    appear on the palindrome from the center to each end. As soon as
+    recognition occurs the left cell of the last pair is erased
+    and the right cell is altered to an "accept" state, here
+    symbolized by nested squares. An undotted left cell would
+    signal a nonpalindrome, in which case the left cell would
+    become blank and the right cell would go into a "reject" state.
+      A Turing machine, which computes serially, requires in general
+    n^2 steps to recognize a palindrome of length n. Although
+    recognition occurs here at step n/2, the accept state is shown
+    moving in subsequent generations to the right to symbolize the
+    cell-by-cell transmission of the acceptance to an output boundary
+    of the cellular space. Of course it is easy to construct more
+    efficient palindrome-recognizing devices with actual electronic
+    hardware, but the point here is to do it with a highly abstract,
+    one-dimensional cellular space in which information can pass
+    only from a cell to adjacent cells and not even the center of
+    the initial series of symbols is known at the outset. As Smith
+    puts it anthropomorphically, after the first step each of the
+    three dotted cells thinks it is at the center of a palindrome.
+    The dotted cells at each end are disillusioned on the next move
+    because of the collission of unlike colors at their right. Not
+    until generation n/2 does the dotted cell at the center know it
+    actually *is* at the center.<17/27>
+      Now for some startling new results concerning Conway's game.
+    Conway was fully aware of earlier games and it was with them in
+    mind that he selected his recursive rules with great care to
+    avoid two extremes: too many patterns that grow quickly without
+    limit and too many that fade quickly. By striking a delicate
+    balance he designed a game of surprising unpredictability and
+    one that produced such remarkable figures as oscillators and
+    moving spaceships. He conjectured that no finite population
+    could grow (in number of members) without limit, and he offered
+    $50 for the first proof or disproof. The prize was won in
+    November by a group in the Artificial Intelligence Project at
+    M.I.T. consisting of (in alphabetical order) Robert April,
+    Michael Beeler, R. William Gosper, Jr., Richard Howell, Rich
+    Schroeppel and Michael Speciner. Using a program devised by
+    Speciner for displaying moves on an oscilloscope, Gosper made
+    a truly astounding discovery: he found a glider gun! The
+    configuration shown below grows into such a gun, firing its
+    first glider on move 40. The gun is an oscillator of period
+    30 that ejects a new glider every 30 moves. Since each glider
+    adds five more counters to the field, the population obviously
+    grows without limit.
+ 
+            A configuration that grows into a glider gun
+    ............................................................
+    ........................**..................................
+    .......................*....................................
+    ......................*.............*.......................
+    .............*........*............**.......................
+    ............**........*...............**....................
+    .......................*..............***......*............
+    ........................**............**......**............
+    ...................................**.......................
+    ....................................*.......................
+    ............................................................
+ 
+      The glider gun led the M.I.T. group to many other amazing
+    discoveries. A series of printouts (supplied by Robert T.
+    Wainwright of Yorktown Heights, N.Y.) shows how 13 gliders crash
+    to form a glider gun (see illustration on page 117) <sorry, too
+    hard to reproduce it here>. The last five printouts show the gun
+    in full action. The group also found a way to position a
+    pentadecathlon (see illustration below), an oscillator of
+    period 15, so that it "eats" every glider that strikes it.
+    A pentadecathlon can also reflect a glider 180 degrees, making
+    it possible for two pentadecathlons to shuttle a glider back
+    and forth forever. Streams of intersecting gliders produce
+    fantastic results. Strange patterns can be created that in
+    turn emit gliders. Sometimes collision configurations grow
+    until they ingest all guns. In other cases the collision mass
+    destroys one or more guns by shooting back. The group's latest
+    burst of virtuosity is a way of placing guns so that the
+    intersecting streams of gliders build a factory that assembles
+    and fires a lightweight spaceship every 300 moves.
+<18/27> 
+     Pentadecathlon (bottom right) "eats" gliders fired by the gun
+    ...............................................................
+    ...............................................................
+    ..........................*....................................
+    .......................****....................................
+    ..............*.......****.........**..........................
+    .............*.*......*..*.........**..........................
+    .**.........*...**....****.....*...............................
+    .**.........*...**.....****....*...............................
+    ............*...**........*....................................
+    .............*.*...............................................
+    ..............*................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ...............................................................
+    ......................................................*....*...
+    ....................................................**.****.**.
+    ......................................................*....*...
+    ...............................................................
+    ...............................................................
+ 
+      The existence of glider guns raises the exciting possibility
+    that Conway's game will allow the simulation of a Turing machine,
+    a universal calculator capable in principle of doing anything the
+    most powerful computer can do. The trick would be to use gliders
+    as unit pulses for storing and transmitting information and
+    performing the required logic operations that are handled in
+    actual computers by their circuitry. If Conway's game allows a
+    universal calculator, the next question will be whether it allows
+    a universal constructor, from which nontrivial self-replication
+    would follow. So far this has not been achieved with a two-state
+    space and Conway's neighborhood, although it has been proved
+    impossible with two states and the von Neumann neighborhood.<19/27>
+      The M.I.T. group found many new oscillators (see illustration
+    below). One of them, the barber pole, can be stretched to any
+    length and is a flip-flop, with each state a mirror image of the
+    other. Another, which they rediscovered, is a pattern Conway's
+    group had found earlier and called a Hertz oscillator. Every
+    four moves the colored "bit" switches from one side of the
+    central frame to the other, making it an oscillator of period 8.
+    The tumbler, which was found by George D. Collins, Jr., of
+    McLean, Va., turns upside down every seven moves.
+ 
+         Barper pole           Hertz oscillator    and   tumbler
+    .....................  ........................  ...............
+    ....**...............  ........................  ...............
+    ....*.*..............  ..........**............  ...............
+    .....................  ..........**............  ...............
+    ......*.*............  ........................  .....**.**.....
+    .....................  .....**...****...**.....  .....**.**.....
+    ........*.*..........  .....*.*.*....*.*.*.....  ......*.*......
+    .....................  .......*.**...*.*.......  ....*.*.*.*....
+    ..........*.*........  .....*.*.*....*.*.*.....  ....*.*.*.*....
+    .....................  .....**...****...**.....  ....**...**....
+    ............*.*......  ........................  ...............
+    .....................  ..........**............  ...............
+    ..............*.*....  ..........**............  ...............
+    ...............**....  ........................  ...............
+    .....................  ........................  ...............
+<20/27> 
+      The Cheshire cat (see illustration below) was discovered by
+    C.R. Tompkins of Corona, Calif. On the sixth move the face
+    vanishes, leaving only a grin; the grin fades on the next move
+    and only a permanent paw print (block) remains. The harvester
+    was constructed by David W. Poyner of Basildon in England. It
+    plows up an infinite diagonal at the speed of light, oscillating
+    with period 4 and ejecting stable packages along the way (see
+    illustration below). "Unfortunately," writes Poyner, "I have
+    been unable to develop a propagator that will sow as fast as
+    the harvester will reap."
+ 
+    The Cheshire cat (0) fades to a grin (6) and disappears,
+    leaving a paw print(7).
+    ...................................
+    ...................................
+    ...............*..*................
+    ...............****................
+    ..............*....*...............
+    ..............*.**.*...............
+    ..............*....*...............
+    ...............****................
+    ................0..................
+    ...................................
+    ...................................
+    ........*..*.........**..**........
+    .......******........*.**.*........
+    .......*....*..........**..........
+    ......**....**......***..***.......
+    .......*....*.......**.**.**.......
+    ........****..........*..*.........
+    .........**...........*..*.........
+    .........1.............2...........
+    ...................................
+    ...........................**......
+    ...............****......*....*....
+    ...******.....******....*......*...
+    ...*....*....**.**.**..............
+    ..*......*...**....**..............
+    ..*......*..***....***.*........*..
+    ..*..**..*....*.**.*.....*.**.*....
+    ....*..*........**........****.....
+    .....3..........4..........5.......
+    ...................................
+    ...................................
+    ...............*..*................
+    ................**.................
+    ................6..................
+    ...................................
+    ...................................
+    ................**.................
+    ................**.................
+    ................7..................
+    ...................................
+<21/27> 
+    The harvester, shown at generations 0 (left) and 10 (right)
+    ..............................  ................................
+    ............................*.  ..............................*.
+    ...........................*..  .............................*..
+    ..........................*...  ............................*...
+    .........................*....  ...........................*....
+    ........................*.....  ..........................*.....
+    .......................*......  .........................*......
+    ......................*.......  ........................*.......
+    .....................*........  .......................*........
+    ....................*.........  ......................*.........
+    ...................*..........  .....................*..........
+    ..................*...........  ....................*...........
+    .................*............  ...................*............
+    ................*.............  ..................*.............
+    ...............*..............  .................*..............
+    ..............*...............  ............*****...............
+    .............*................  ...........*****................
+    ............*.................  ..........***.**................
+    ...........*..................  .........**.....................
+    ..........*...................  ................................
+    .........*....................  ................................
+    ........*.....................  .....**.........................
+    .......*......................  .....**.........................
+    ......*.......................  ................................
+    .*****........................  ................................
+    .****.........................  .**.............................
+    .*.**.........................  .**.............................
+    ..............................  ................................
+    ..............................  ................................
+    ..............................  ................................
+
+      Wainwright has made a number of intriguing investigations.
+    He filled a 120-by-120 square field with 4,800 randomly placed
+    bits (a density of one-third) and tracked their history for 450
+    generations, by which time the density of this primordial soup,
+    as Wainwright calls it, had thinned steadily to one-sixth.
+    Whether it would eventually vanish or, as Wainwright says,
+    percolate at a constant minimum density is anybody's guess.
+    At any rate, during the 450 generations 42 short-lived gliders
+    were formed. Wainwright found 14 different patterns that became
+    glider states on the next move. The pattern that produced the
+    greatest number of gliders (14 in all <???>) is shown ("a" in
+    illustration below). A Z-pattern found by Collins and by
+    Jeffrey Lund of Pewaukee, Wis., after 12 moves becomes two
+    gliders that sail off in opposite directions (b). Wainwright
+    and others set two gliders on a collission course that causes
+    all bits to vanish on the fourth move (c). Wallace W. Wagner
+    of Anaheim, Calif., found a collission course for two lightweight
+    spaceships that also ends (on the seventh move) in total
+    blankness (d).
+<22/27> 
+           Two spawners of gliders and two collision courses
+    a             b              c                d
+    ............  .............  ...............  .................
+    ............  .............  ...............  .................
+    ............  .............  ...............  .................
+    ............  .............  ...............  .................
+    ............  .............  ...............  ..........*......
+    ............  ....*****....  .....*.........  .........*.......
+    .....***....  .......*.....  ......*..*.....  ....****.*...*...
+    .......*....  ......*......  ....***.*......  ...*...*.****....
+    ....*.......  .....*.......  ........***....  .......*.........
+    ............  ....*****....  ...............  ......*..........
+    ............  .............  ...............  .................
+    ............  .............  ...............  .................
+    ............  .............  ...............  .................
+    ............  .............  ...............  .................
+    ............  .............  ...............  .................
+
+      Wainwright has experimented with various infinite fields of
+    regular stable patterns, which he call agars-rich culture
+    mediums. When, for instance, a single "virus", or bit, is placed
+    in the agar of blocks shown in the illustration below so that it
+    touches the corners of four blocks, the agar eliminates the virus
+    and repairs itself in two moves. If, however, the alien bit is
+    positioned as shown (or at any of the seven other symmetrically
+    equivalent spots), it initiates an inexorable disintegration
+    of the pattern. The portion eaten away contains active debris
+    that has overall bilateral symmetry along one axis and a roughly
+    oval border that expands, probably forever, in the four compass
+    directions at the speed of light.
+ 
+    Pattern doomed by a virus (in middle)
+    ..............................
+    ..............................
+    .....**.**.**.**.**.**.**.....
+    .....**.**.**.**.**.**.**.....
+    ..............................
+    .....**.**.**.**.**.**.**.....
+    .....**.**.**.**.**.**.**.....
+    ..............................
+    .....**.**.**.**.**.**.**.....
+    .....**.**.**.**.**.**.**.....
+    ..............*...............
+    .....**.**.**.**.**.**.**.....
+    .....**.**.**.**.**.**.**.....
+    ..............................
+    .....**.**.**.**.**.**.**.....
+    .....**.**.**.**.**.**.**.....
+    ..............................
+    .....**.**.**.**.**.**.**.....
+    .....**.**.**.**.**.**.**.....
+    ..............................
+    ..............................
+<23/27> 
+      The most immediate practical application of automata theory,
+    Banks believes, is likely to be in the design of circuits capable
+    of self-repair or the wiring of any specified type of new circuit.
+    No one can say how significant the theory may eventually become
+    for the physical and biological sciences. It may have important
+    bearings on cell growth in embryos, the replication of DNA
+    molecules, the operation of nerve nets, genetic changes in
+    evolving populations and so on. Analogies with life processes
+    are impossible to resist. If a primordial broth of amino acids
+    is large enough, and there is sufficient time, self-replicating,
+    moving automata may result from complex transition rules built
+    into the structure of matter and the laws of nature. There is
+    even the possibility that spacetime itself is granular, composed
+    of discrete units, and that the universe, as Fredkin and others
+    have suggested, is a cellular automaton run by an enormous
+    computer. If so, what we call motion may be only simulated
+    motion. A moving spaceship, on the ultimate microlevel, may
+    be essentially the same as one of Conway's spaceships, appearing
+    to move on the macrolevel whereas actually there is only an
+    alteration of states of basic space-stime cells in obedience to
+    transition rules that have not yet been discovered.
+<24/27> 
+                   Scientific American, March 1971
+                     Mathematical games, page 109
+ 
+      John Horton Conway and R. William Gosper, Jr. (who with the
+    aid of his colleagues at the Massachusetts Institute of Technology
+    found the glider gun described last month), have independently
+    succeeded in "universalizing" the cellular space of Conway's
+    "life" game. By using gliders as pulses they were able to
+    simulate a Turing machine and create a universal calculator.
+    Gosper's group has also found ways of forming giant flip-flops
+    such as the one shown on the opposite page (108) <sorry, too
+    hard to reproduce>, which oscillates between the patterns shown
+    in black and in color.
+ 
+                   Scientific American, April 1971
+                     Mathematical games, page 117
+ 
+      February's column showed a figure called the harvester, in
+    John Horton Conway's game of "life", that plows up an infinite
+    diagonal of bits, depositing them in stable blocks. Keith
+    McClelland and his associates Thomas Holmes, Michael Sporer,
+    Philip Stanley, Donal Woods and William Woods in the Computer
+    Control Division of Honeywell Inc., in Framingham, Mass.,
+    have investigated a variety of figures of this type that they
+    call "fuses". The simplest fuse is a diagonal of bits that rises
+    to infinity or has a stable top end ("a" in illustration given
+    below). It simply burns out without producing sparks or smoke.
+    Another smokeless fuse oscillates with a period of four, giving
+    off sparks that quickly fade (b). A dirty fuse leaves behind
+    clouds of debris as it burns (c). The "baker" is what McClelland
+    calls a "confused fuse": it bakes a string of stable loaves (d).
+ 
+                               Four kinds of fuse
+    .........................................................................
+    ..........................**............*..............*...............*.
+    .........................*.*...........*..............*...............*..
+    ........................*.............*..............*...............*...
+    .......................*.............*..............*...............*....
+    ......................*.............*..............*...............*.....
+    .....................*.............*..............*...............*......
+    ....................*.............*..............*...............*.......
+    ...................*.............*..............*...............*........
+    ..................*.............*..............*...............*.........
+    .............a...*.........b...*..........c...*...........d...*..........
+    ................*.............*..............*...............*...........
+    ...............*.............*..............*...............*............
+    ..............*.............*..............*...............*.............
+    .............*.............*..............*...............*..............
+    ............*.............*..............*...............*...............
+    ...........*.............*..............*...............*................
+    ..........*.............*..............*...............*.................
+    .........*.............*..............*...............*..................
+    ........*.............*..............*...............*...................
+    .......*............***............***..............*....................
+    ......*............*..*............**............***.....................
+    .....*..............**............**..............*......................
+    .........................................................................
+<25/27> 
+      The group also tracked the life histories of the first nine
+    members of the five-cell-cross series, of which the first four
+    orders are shown in the illustration given below. Order-1 is a
+    small portion of an infinite trellis found by Donald Woods:
+    solid horizontal and vertical rows with two-cell spacing between.
+    Like the trellis, it vanishes completely in one move. The order-2
+    cross dies in eight generations. Order-3 ends with many traffic
+    lights. Order-4 stabilizes with eight blinkers after 34 moves,
+    making a spectacular display along the way. Its 19th generation
+    is a ring of blocks with a perfect checkerboard in the center.
+    Order-5 and order-7 go to four pulsars, order-6 and order-8 go
+    to four pulsars and a tub, and order-9 ends after 42 moves with
+    16 blocks and eight blinkers.
+ 
+                          The five-cell-cross series
+    ......................................................................
+    ......................................................................
+    ......................................................................
+    .........................................................*............
+    .........................................................*............
+    .........................................................*............
+    .........................................................*............
+    .........................................................*............
+    ......................................................................
+    .................................*.......................*............
+    .................................*.......................*............
+    .................................*.......................*............
+    .................................*.......................*............
+    .................................*.......................*............
+    ..............................................*****.*****.*****.*****.
+    ...............*.................*.......................*............
+    ...............*.................*.......................*............
+    ...............*.........*****.*****.*****...............*............
+    ...............*.................*.......................*............
+    ...............*.................*.......................*............
+    ..........*****.*****.................................................
+    ...*...........*.................*.......................*............
+    ...*...........*.................*.......................*............
+    .*****.........*.................*.......................*............
+    ...*...........*.................*.......................*............
+    ...*...........*.................*.......................*............
+    ......................................................................
+    ......................................................................
+    ......................................................................
+<26/27> 
+              Two new glider-generators
+    ..............................................
+    ..............................................
+    ..............................................
+    .............................****.............
+    ..............................................
+    ...........................********...........
+    ...........*..................................
+    ..........*.*............************.........
+    .........*..*.................................
+    ..........**...............********...........
+    .........*..*.................................
+    .........*.*.................****.............
+    ..........*...................................
+    ..............................................
+    ..............................................
+    ..............................................
+ 
+      Two new glider-generators have been found by the Honeywell
+    group (see illustration above). The "biloaf" (left) in four
+    moves produces two gliders going opposite ways, and the 4-8-12
+    diamond (right) in 15 moves forms four gliders "headed for the
+    four corners of the earth". No debris is left by either generator.
+    Space prevents giving other unusual configurations discovered by
+    the Honeywell group, or details of a two-person "life" game
+    devised by Donald Woods. (Many readers have sent in such games,
+    with widely varying rules.) Readers interested in keeping up with
+    new "life" developments should contact Robert T. Wainwright at
+    1280 Edcris Road in Yorktown Heights, N.Y. 10598. He is planning
+    a newsletter to serve as a clearinghouse for the rapidly growing
+    body of information concerning all aspects of Conway's remarkable
+    cellular-automata game.
+<27/27> 
+                   Scientific American, January 1972
+                     Mathematical games, page 107
+ 
+      A remarkable seven-bit stable figure in Conway's game "life"
+    has been discovered by R. William Gosper, Jr., and his associates
+    at the Massachusetts Institute of Technology. Called "the eater",
+    it is capable of eating a large variety of "life" forms and then
+    quickly repairing itself. The first four patterns in the
+    illustration belove show the eater about to ingest a glider (1),
+    a blinker (2), a pre-beehive (3) and a lightweight spaceship (4).
+    In the fifth pattern two eaters are poised to eat each other (5).
+    This is prevented by their amazing self-repairing ability,
+    creating what is probably the smallest oscillating pattern,
+    with a rare period of 3. The last pattern shows how two gliders
+    collide to produce an eater in 13 moves (6).
+ 
+    ...................................
+    .1....*.......2............3.......
+    .....*.........................***.
+    .....***..........***..........***.
+    ...................................
+    ...**...........**...........**....
+    ....*............*............*....
+    .***..........***..........***.....
+    .*............*............*.......
+    ...................................
+    ...................................
+    ...................................
+    .4....*.......5............6.......
+    .......*.............*.............
+    .......*...........***.............
+    ....*..*..........*........**......
+    .....***..........**........**.....
+    ...........................*...**..
+    ...**...........**.............*.*.
+    ....*............*.............*...
+    .***..........***..................
+    .*............*....................
+    ...................................
+ 
+    END OF DOCUMENT
